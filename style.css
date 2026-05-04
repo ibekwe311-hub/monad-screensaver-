@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+#logo {
+  position: absolute;
+  width: 120px;
+  height: auto;
+  filter: hue-rotate(0deg);
+}
+
+#counter {
+  position: fixed;
+  bottom: 16px;
+  right: 20px;
+  color: rgba(255, 255, 255, 0.25);
+  font-family: monospace;
+  font-size: 13px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+#counter span {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#cornerToast {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  font-family: monospace;
+  font-size: 1.2rem;
+  padding: 12px 28px;
+  border-radius: 50px;
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 20;
+}
+
+#cornerToast.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
